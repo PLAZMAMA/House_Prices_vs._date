@@ -13,3 +13,7 @@ ys = df[['price']]
 
 #creaing the training and testing data for the model
 x_train, x_test, y_train, y_test = model_selection.train_test_split(xs, ys, test_split = 0.3)
+
+#defining and training the model
+model = LinearRegression(n_jobs = -1)
+model.fit(x_train, y_train)
